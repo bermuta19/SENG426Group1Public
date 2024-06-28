@@ -1,17 +1,16 @@
-# Cryptonite Final Version (not cryptonight ;) )
+# Ucrypt Final Version 
 
 ## New Feature: 
-   As an admin I want to delete a resource at admin panel so that I can remove unnecessary/oudated files.
+   As an admin I want to view how many new accounts are waiting to be accepted so that i can go to the admin panel and accept them 
 ## What files did I change to implement this feature?
-### Frondend
-   I have modified these files: (1. service/file.service.ts, 2. resources/resources.component.html, 3. resources/resources.component.ts)
-### Backend
-   I have modified these files: (1. services/FileService.java (added deleteFile() method), 2. repositories/FileRepository.java, 3. api/v1/FileController.java)
+### Frontend only
+   I have modified these files: (1. UCryptPortal\src\app\modules\admin\components\admin-layout\admin-layout.component.ts, 2.UCryptPortal\src\app\modules\admin\components\admin-layout\admin-layout.component.html)
+
 ## Bug Fix:
-   I have fixed the role change bug.
+   I have fixed the Triple DES key generation bug
 ## What files did I modify to fix this bug?
-### Frontend Only: 
-   I did change the attribute value's value to Capital format by adjusting the getRoles() for both displayName and value in all three componenents.ts  and changed the [value]='role.value'> of components.html files at (admin/components/ 1.new-accounts/, 2.staff-accounts/, 3.user.accounts/). 
+### Backend only
+crypto-back\src\main\java\io\uranus\ucrypt\services\support\encryption\impl\TripleDesEncryptionHandler.java
 
 ## To run the application: 
    * You need to have Docker Desktop and MySQL Server
